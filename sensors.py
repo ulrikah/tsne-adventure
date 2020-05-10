@@ -121,6 +121,14 @@ class SensorsHandler(object):
     def _normalize_rotation(self, angle):
         return (angle + 1.) * .5
 
+
+    '''
+        TO DO: requires polish to avoid too much drifting. See:
+            - https://github.com/xioTechnologies/Gait-Tracking-With-x-IMU/
+            - https://stackoverflow.com/questions/47210512/using-pykalman-on-raw-acceleration-data-to-calculate-position
+            - https://github.com/datascopeanalytics/traces
+            - https://dsp.stackexchange.com/questions/34463/removing-drift-from-integration-of-accelerometer-data
+    '''
     def update_position(self, x, y, z, required_samples = 3):
         if len(self.samples) <= required_samples:
             return
