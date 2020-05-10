@@ -4,17 +4,18 @@
 
 import time
 import numpy as np
+import sys
+import argparse
+import json
+from utils import map_range, clip, play_sample
+import math
+
 from scipy import integrate
 from scipy.signal import butter, lfilter
-import sys
-
 from pythonosc import dispatcher, osc_server
 from pythonosc.udp_client import SimpleUDPClient
 from socket import AF_INET, SOCK_DGRAM, socket
 import mido
-from utils import *
-
-
 
 def get_ip_address():
     s = socket(AF_INET, SOCK_DGRAM)
@@ -54,6 +55,7 @@ class SensorsHandler(object):
         # controlled by rotation vector
         self.position = np.array([0., 0., 0.])
         self.step_size = 0.02 # step size for each frame
+        self.closest = None # closest neighbor to the device
 
         # debug
         self.i = 1
@@ -116,20 +118,38 @@ class SensorsHandler(object):
         self.position += (self.step_size * np.array([pitch, roll, yaw]))
         self.position = np.clip(self.position, -5, 5)
         self.client.send_message("/position", list(self.position))
-        print(f"{addr} | {self.position}")
+        closest = self.closest_neighbor()
+        if closest != self.closest:
+            print(f"New closest neighbor \n {closest['point']}")
+            self.closest = closest
+            play_sample(self.closest['path'])
+
+    def closest_neighbor(self):
+        distances = np.empty((len(self.samples), 2))
+        closest = math.inf
+        closest_idx = None
+        for i, sample in enumerate(self.samples):
+            d = np.linalg.norm(self.position - sample['point'])
+            if (d < closest):
+                closest = d
+                closest_idx = i
+        assert closest_idx is not None, "No samples in the space"
+        return self.samples[closest_idx]
+
+        
+        
 
     def _normalize_rotation(self, angle):
         return (angle + 1.) * .5
 
-
-    '''
-        TO DO: requires polish to avoid too much drifting. See:
-            - https://github.com/xioTechnologies/Gait-Tracking-With-x-IMU/
-            - https://stackoverflow.com/questions/47210512/using-pykalman-on-raw-acceleration-data-to-calculate-position
-            - https://github.com/datascopeanalytics/traces
-            - https://dsp.stackexchange.com/questions/34463/removing-drift-from-integration-of-accelerometer-data
-    '''
     def update_position(self, x, y, z, required_samples = 3):
+        '''
+            TO DO: requires polish to avoid too much drifting. See:
+                - https://github.com/xioTechnologies/Gait-Tracking-With-x-IMU/
+                - https://stackoverflow.com/questions/47210512/using-pykalman-on-raw-acceleration-data-to-calculate-position
+                - https://github.com/datascopeanalytics/traces
+                - https://dsp.stackexchange.com/questions/34463/removing-drift-from-integration-of-accelerometer-data
+        '''
         if len(self.samples) <= required_samples:
             return
 
@@ -178,6 +198,18 @@ class SensorsHandler(object):
                 self.send_message(note=60, channel=i, velocity=vel)
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='tSNE on audio')
+    parser.add_argument('--tsne_file', action='store', help='path to existing file with t-SNE 3D coordinates')
+    args = parser.parse_args()
+
+    if args.tsne_file:
+        with open(args.tsne_file) as tsne_file:
+            samples = json.load(tsne_file)
+        client = SimpleUDPClient("127.0.0.1", 1337)
+        client.send_message("/tsne-clear", "")
+        for sample in samples:
+            client.send_message("/tsne", sample['point'])
+    
     # server
     address = get_ip_address()
     port = 9000
@@ -187,7 +219,15 @@ if __name__ == "__main__":
     outgoing_port = 1337
     
     sensors = SensorsHandler(outgoing_address=outgoing_address, outgoing_port=outgoing_port)
-    
+    if samples:
+        # normalize to [-5, 5]
+        for sample in samples:
+            # numpy array is faster for euc dist later on
+            sample['point'] = np.array(list(map(lambda x: (x - 0.5) * 10, sample['point'])))
+        sensors.samples = samples
+    else:
+        print(f"NB: to visualise the t-SNE output, you have to use specify a t-SNE file. See --help")
+
     dispatcher = dispatcher.Dispatcher()
     dispatcher.map('/accelerometer', sensors.sensors2osc_handler) # sensors2osc
     dispatcher.map('/oscHook', sensors.osc_hook_handler) # oscHook (bundled message with all info)
