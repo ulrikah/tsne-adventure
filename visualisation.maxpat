@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 1314.0, 79.0, 821.0, 911.0 ],
+		"rect" : [ 1314.0, 79.0, 828.0, 911.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,147 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-113",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 307.0, 225.799987999999985, 71.0, 20.0 ],
+					"text" : "mira.motion"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-110",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 417.75, 421.199951000000056, 55.0, 20.0 ],
+					"text" : "r rot_xyz"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"candicane2" : [ 0.282353, 0.560784, 0.886275, 1.0 ],
+					"candicane3" : [ 0.298039, 0.380392, 0.658824, 1.0 ],
+					"candycane" : 3,
+					"id" : "obj-98",
+					"ignoreclick" : 1,
+					"maxclass" : "multislider",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 550.75, 71.800018000000023, 187.0, 115.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 275.75, 298.0, 187.0, 115.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_invisible" : 1,
+							"parameter_shortname" : "multislider[1]",
+							"parameter_type" : 3,
+							"parameter_longname" : "multislider[6]"
+						}
+
+					}
+,
+					"setminmax" : [ -6.28000020980835, 6.28000020980835 ],
+					"setstyle" : 3,
+					"size" : 3,
+					"slidercolor" : [ 0.431373, 0.752941, 0.890196, 1.0 ],
+					"varname" : "multislider[2]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.0,
+					"id" : "obj-104",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 530.463393999999994, 158.83660900000001, 18.0, 17.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 255.463393999999994, 385.036590999999987, 18.0, 17.0 ],
+					"text" : "Z"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.0,
+					"id" : "obj-105",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 530.463393999999994, 120.800018000000023, 18.0, 17.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 255.463393999999994, 347.0, 18.0, 17.0 ],
+					"text" : "Y"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.0,
+					"id" : "obj-106",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 665.75, 48.800018000000023, 89.0, 17.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 390.75, 275.0, 89.0, 17.0 ],
+					"text" : "Accelerometer "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.0,
+					"id" : "obj-19",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 530.463393999999994, 81.300018000000023, 18.0, 17.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 255.463393999999994, 307.5, 18.0, 17.0 ],
+					"text" : "X"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-63",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 550.75, 48.800018000000023, 55.0, 20.0 ],
+					"text" : "r rot_xyz"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-62",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 151.5, 331.800018000000023, 57.0, 20.0 ],
+					"text" : "s rot_xyz"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Helvetica",
 					"fontsize" : 12.0,
 					"id" : "obj-61",
@@ -46,8 +187,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 151.5, 414.0, 113.0, 20.0 ],
-					"text" : "OSC-route /rotation"
+					"patching_rect" : [ 151.5, 311.0, 149.0, 20.0 ],
+					"text" : "OSC-route /accelerometer"
 				}
 
 			}
@@ -206,7 +347,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 350.0, 311.0, 61.0, 20.0 ],
+					"patching_rect" : [ 485.0, 441.199951000000056, 61.0, 20.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -512,7 +653,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 350.0, 386.800048999999944, 325.0, 20.0 ]
+					"patching_rect" : [ 485.0, 555.0, 325.0, 20.0 ]
 				}
 
 			}
@@ -843,6 +984,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Lato",
@@ -877,1418 +1019,2614 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1311",
+									"id" : "obj-204",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.906319 -4.421998 3.176867"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-205",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.505913 0.333789 -3.298974"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-206",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.02411 0.198965 2.218897"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-207",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.227662 -1.9724 -3.373179"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-208",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.20027 -1.338428 -4.185978"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-209",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.173318 -1.357676 1.014216"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-210",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.954445 3.901283 3.631888"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-211",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.808999 4.139013 2.190911"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-212",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.401066 -3.615836 -2.093819"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-213",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.952757 3.916364 3.129767"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-214",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.451656 -1.751494 0.422086"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-215",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.733604 5. 0.52216"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.902103 0.0027 2.901701"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1312",
+									"id" : "obj-216",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.749087 4.64398 4.268959"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-217",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.47435 3.166071 1.900621"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-218",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.14495 -2.002081 -2.3"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.473753 4.512184 3.4233"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1313",
+									"id" : "obj-219",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.892957 1.938937 2.880898"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.681634 -0.443322 -3.772555"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1314",
+									"id" : "obj-220",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.680573 -1.653515 -2.452242"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.300289 3.623442 4.005042"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1315",
+									"id" : "obj-221",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.132591 0.299256 -1.354343"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-222",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.104882 -0.208637 0.404629"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-223",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.524084 -2.101803 -4.945736"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-224",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.805292 2.237739 3.623378"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-225",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.515338 0.226336 0.456803"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-226",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.552018 3.17321 3.648847"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-227",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.6 0.473704 -3.775634"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.332009 0.03416 2.45118"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1316",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.149262 -3.783045 0.500927"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1317",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.388211 0.36786 -1.782002"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1318",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.616422 -1.360355 1.491345"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1319",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.217684 0.987117 4.621762"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1320",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.643373 0.459767 -1.612447"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1321",
+									"id" : "obj-228",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.4093 -2.13352 4.162141"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.147628 2.14 3.718161"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1322",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.176981 -3.864665 2.627671"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1323",
+									"id" : "obj-229",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.794493 4.41 0.927032"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.09 3.509027 4.04188"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1324",
+									"id" : "obj-230",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 4.855317 -2.628882 -0.647578"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.570036 -1.669229 -3.591373"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1325",
+									"id" : "obj-231",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.561873 2.902699 1.945967"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.765501 -1.17452 -0.762382"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1326",
+									"id" : "obj-232",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.783187 -0.039992 -3.126942"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.20491 2.640493 -0.688407"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1327",
+									"id" : "obj-233",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.727529 -0.359021 3.92419"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.829778 -0.61611 0.555606"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1328",
+									"id" : "obj-234",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.40326 0.169018 1.846741"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.807471 1.002296 0.942745"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1329",
+									"id" : "obj-235",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.65061 -4.132422 2.688209"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.604738 3.455616 3.452097"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1330",
+									"id" : "obj-236",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.241031 -2.734482 0.521458"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.060855 3.113205 4.059113"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1331",
+									"id" : "obj-237",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.497569 0.814208 -1.993308"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.852284 -2.336567 -4.080581"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1332",
+									"id" : "obj-238",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.977471 2.383229 4.248567"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-239",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.738892 -3.434603 0.095867"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-240",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.790891 0.801403 2.101612"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-241",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.092275 -2.817408 1.603267"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-242",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.702783 4.495538 3.345481"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-243",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 5. 0.32662 1.316131"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.54 3.447714 3.183113"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1333",
+									"id" : "obj-244",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.384936 -2.980637 1.759033"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.486429 0.434687 -2.30798"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1334",
+									"id" : "obj-245",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.927942 2.269483 0.54267"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.327921 2.387471 3.205721"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1335",
+									"id" : "obj-246",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.559419 0.169421 -2.403623"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.607584 -1.967596 -2.121253"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1336",
+									"id" : "obj-247",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.1742 0.449359 -3.426232"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.678462 1.00629 2.953209"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1337",
+									"id" : "obj-248",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.09786 2.079092 2.627184"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.370465 -0.903656 1.743461"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1338",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.822756 -2.044988 -0.634726"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1339",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.430259 3.682873 3.689585"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1340",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.853379 -2.259393 3.472162"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1341",
+									"id" : "obj-249",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.681552 2.9 0.061024"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.368008 1.103647 -3.51"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1342",
+									"id" : "obj-250",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.420616 -3.294555 -3.607501"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.081113 -2.182984 1.348616"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1343",
+									"id" : "obj-251",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.176358 3.155509 -0.341957"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.669816 0.606896 0.423282"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1344",
+									"id" : "obj-252",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.817043 0.503575 -0.917844"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.345004 -2.142895 -2.775802"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1345",
+									"id" : "obj-253",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.781911 -3.03952 -0.325222"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.031823 -1.813344 0.624436"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1346",
+									"id" : "obj-254",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.234205 4.227192 3.005679"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-255",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.572068 1.139613 2.462401"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-256",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.4309 2.90889 3.580142"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.302905 5. 4.051597"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1347",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.432007 -1.868135 -2.734109"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1348",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.594188 1.589738 1.245322"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1349",
+									"id" : "obj-257",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.125342 2.84 0.584575"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 5. 0.523275 3.719386"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1350",
+									"id" : "obj-258",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.714154 3.212655 3.554372"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-259",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.183478 -3.462496 -1.773332"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-260",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.084713 -4.098722 -2.414039"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-261",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 4.419249 1.045782 2.512401"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-262",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.836078 -1.336781 -3.918627"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-263",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.00958 -5. -0.836234"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.41 -0.428298 1.088593"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1351",
+									"id" : "obj-264",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.40779 0.132487 0.312134"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.624792 -1.075223 -4.785426"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1352",
+									"id" : "obj-265",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.810754 -0.624151 2.455979"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.752975 -1.916409 0.563737"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1353",
+									"id" : "obj-266",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.402112 0.945919 2.30388"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.395829 3.822964 4.284598"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1354",
+									"id" : "obj-267",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.144413 -1.840057 -2.378104"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.996785 -2.611708 0.437866"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1355",
+									"id" : "obj-268",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.063543 1.835609 -3.224834"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.706321 0.64357 -0.451826"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1356",
+									"id" : "obj-269",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.857767 -1.693355 -0.376145"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.376438 0.777028 -0.56714"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1357",
+									"id" : "obj-270",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.560284 4.456134 3.546997"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-271",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.484362 -3.463073 -0.39453"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-272",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.188342 1.791497 2.32655"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-273",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.643184 0.539352 1.677331"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-274",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.544679 2.126094 2.895553"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-275",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.968041 0.775923 -2.330999"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-276",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.174952 2.938755 2.84506"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-277",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.374022 -3.454414 -3.297117"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-278",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.492197 1.510317 -2.710553"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-279",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.271647 -1.133753 1.236488"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-280",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.142008 1.279667 -3.235075"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-281",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.085864 -2.822594 0.844342"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-282",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.161833 -1.539383 2.113467"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-283",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.632215 4.164078 3.967925"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-284",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.425295 -0.389469 -2.628074"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-285",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.389878 1.666567 4.986084"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-286",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.425075 -3.452922 0.519415"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-287",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.979029 -1.396699 0.529545"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-288",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.077359 3.575587 2.019588"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-289",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.328727 0.059741 -1.333066"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-290",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.337673 0.288295 4.601611"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-291",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 4.752091 1.231365 4.158416"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-292",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.055361 1.639658 4.1781"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.524067 2.09453 2.21494"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1358",
+									"id" : "obj-293",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.563721 0.139377 1.366385"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.470754 -0.684418 0.091985"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1359",
+									"id" : "obj-294",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.621319 3.734297 3.477625"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.511473 -0.4557 -3.002125"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1360",
+									"id" : "obj-295",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.21049 -3.622862 -1.227927"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.025415 2.569277 -4.197652"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1361",
+									"id" : "obj-296",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.339119 -2.601969 3.763757"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.830117 -2.630547 -0.476578"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1362",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.620415 0.539894 2.835741"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1363",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.298701 -0.550747 1.710212"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1364",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.718364 -1.840324 0.797971"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1365",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.463073 1.168965 -0.679103"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1366",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.835411 1.314135 2.512265"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1367",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.817691 1.029248 -0.556238"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1368",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.279708 -1.059563 2.76347"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1369",
+									"id" : "obj-297",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.907035 0.259264 5."
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.309071 -1.588788 -4.7"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1370",
+									"id" : "obj-298",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.419097 -2.188939 -0.746821"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.79056 2.147926 2.467367"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1371",
+									"id" : "obj-299",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.121829 -0.626434 -1.186463"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.543651 -2.473351 -0.126664"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1372",
+									"id" : "obj-300",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.807431 2.549719 2.527106"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-301",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.786613 2.207314 3.611283"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-302",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.844868 2.348937 3.279433"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-303",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.626322 3.005747 3.55655"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-304",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -5. -1.821089 2.55754"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.25 0.53995 -2.764291"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1373",
+									"id" : "obj-305",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.585511 4.17165 2.724728"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.055283 -1.233294 2.781391"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1374",
+									"id" : "obj-306",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.640679 2.876376 2.060964"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.601108 1.194883 1.024095"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1375",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.370245 -0.464019 0.331486"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1376",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.69391 -4.526215 0.59126"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1377",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.291021 -2.927543 1.975697"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1378",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.244817 -3.778081 3.246275"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1379",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.848493 3.277733 -1.136434"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1380",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.811396 -1.675594 3.041888"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1381",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.835784 -4.178174 -1.970566"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1382",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.065666 1.525109 1.22644"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1383",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.001008 -0.994767 -3.613188"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1384",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.424541 -0.735293 -0.981346"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1385",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.803035 -3.806873 -0.466499"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1386",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.95006 -1.460808 0.651628"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1387",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.769167 -0.156147 -0.109318"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1388",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.142972 -2.85683 1.928537"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1389",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.045354 -1.656116 0.448873"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1390",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.472761 -4.205138 1.107027"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1391",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.865605 2.182691 -2.032279"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1392",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.873216 2.459512 -1.757912"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1393",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.224634 0.373979 3.319476"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1394",
+									"id" : "obj-307",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.995659 -0.115501 -5."
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.737077 0.08008 0.886"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1395",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.39791 -3.073942 -1.188389"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1396",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.041052 -3.926779 -2.379257"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1397",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.718398 -3.653678 -0.320691"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1398",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.375062 -0.075375 3.960536"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1399",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.378413 1.840253 1.626589"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1400",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.995175 -0.231602 2.056843"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1401",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.043906 3.043635 1.785175"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1402",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.367371 2.442491 -2.619749"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1403",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.227774 0.965348 1.671317"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1404",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 4.103527 -0.683745 -0.167039"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1405",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.600669 -0.995438 2.822532"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1406",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.805192 -3.235602 1.386085"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1407",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.740121 -1.370002 -2.571614"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1408",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.963451 -1.314347 -1.093498"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1409",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.81377 1.893039 -0.62267"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1410",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.12378 0.889916 3.010859"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1411",
-									"linecount" : 11,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.972042 -1.958809 1.245526"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1412",
+									"id" : "obj-308",
 									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.447118 1.924518 -2.73"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.977741 0.2557 0.953566"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1413",
+									"id" : "obj-309",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.055119 4.669694 -1.462778"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.618705 2.944822 2.074804"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1414",
+									"id" : "obj-310",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.368959 1.242923 -0.222252"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.309842 -2.878693 -1.525615"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1415",
+									"id" : "obj-311",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.787491 3.232881 1.633411"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.249173 1.514457 4.302914"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1416",
+									"id" : "obj-312",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.577724 2.955796 4.339717"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.414306 0.56827 1.471639"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1417",
+									"id" : "obj-313",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.314907 1.91513 0.601813"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.338028 -1.971738 -0.786144"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1418",
+									"id" : "obj-314",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.105631 -0.028725 0.27316"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.70573 4.041192 3.581749"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1419",
+									"id" : "obj-315",
 									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 50.0, 150.0, 100.0, 0.0 ],
-									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.515928 -0.566823 -1.3229"
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.503469 1.389307 4.642217"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-316",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.349201 2.373674 -1.048017"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-317",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.136438 0.689669 0.612043"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-318",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.224112 -1.751596 -4.270804"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-319",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.519263 -1.01472 2.037918"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-320",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.724791 -0.588842 2.986174"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-321",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.314515 -2.411081 1.575227"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-322",
+									"linecount" : 9,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 116.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.8 -5. 2.002451"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-323",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.349003 0.438768 0.433623"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-324",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.89383 -0.267677 2.732328"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-325",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.531339 3.456131 2.822081"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-326",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.941023 -1.367306 -5."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-327",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.816971 -1.41891 1.481559"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-328",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.205218 0.185388 2.50496"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-329",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.3 -1.202215 1.392311"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-330",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.279055 -2.678368 0.024101"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-331",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.591552 -2.386948 1.901273"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-332",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.500543 -1.214368 1.433114"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-333",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.228148 2.293064 4.443422"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-334",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.121368 -3. -0.112273"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-335",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.044028 -1.714844 -1.653066"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-336",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.052578 -2.820805 -2.382177"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-337",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.554759 0.943231 -1.57242"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-338",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.240025 -2.622907 -3.852818"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-339",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.20645 1.446796 1.663357"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-340",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.343403 -0.722952 2.070141"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-341",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.551345 3.735029 4.222405"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-342",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.243029 2.287788 5."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-343",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.907993 0.816485 -1.243176"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-344",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.10176 -1.003328 -0.767353"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-345",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.896751 0.424715 2.146236"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-346",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.113731 1.277654 0.073696"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-347",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.1 3.797092 0.259658"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-348",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.567984 -0.732589 2.098601"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-349",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.651538 2.308319 3.4"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-350",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.75958 -4.058968 -2.461283"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-351",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.065431 -1.127988 -3.222447"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-352",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.256637 -1.782499 -1.949228"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-353",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.778104 -1.527909 0.828562"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-354",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.262306 0.92449 -1.961397"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-355",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.550272 0.378698 2.915241"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-356",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.430615 2.619013 -0.45237"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-357",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.764002 3.453369 2.892478"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-358",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.285034 -1.736375 -0.028223"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-359",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.497976 -3.731099 -3.097816"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-360",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.684592 0.014949 -1.970635"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-361",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.322988 2.642904 4.282475"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-362",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.088992 2.856519 3.469709"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-363",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.719944 -1.735017 0.05272"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-364",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.934152 -2.895576 -3.928766"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-365",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.291029 -0.507839 -4.451271"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-366",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.85543 -1.306816 2.438349"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-367",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.653167 -1.691722 -0.806726"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-368",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.247321 2.473654 1.685182"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-369",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -5. 2.715991 2.921153"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-370",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.024271 4.391432 2.957022"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-371",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.228153 1.34202 1.887816"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-372",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.035723 -3.542327 -3.936872"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-373",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.633509 -0.354522 2.187982"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-374",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.979267 -0.399576 1.713136"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-375",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.741597 1.910643 4.32"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-376",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.220796 1.280063 3.977006"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-377",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 4.068297 0.329723 3.758787"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-378",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.94137 -0.306578 -1.980639"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-379",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.480272 3.748051 2.42277"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-380",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.54607 -1.686791 2.267935"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-381",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.435076 -0.920322 2.88882"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-382",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -4.69433 1.578481 2.920984"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-383",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.846633 -1.252419 2.485587"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-384",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.83449 1.516582 2.647132"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-385",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.688372 -0.947246 -1.605903"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-386",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.061937 1.716162 2.005556"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-387",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -1.889079 -2.086822 1.618038"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-388",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.566636 2.868954 4.08882"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-389",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.085675 3.85 4.926451"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-390",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.617602 4.821954 3.556648"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-391",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 4.835243 1.534883 3.398808"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-392",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.855541 0.202316 -3.202662"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-393",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -2.058188 3.50129 3.156132"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-394",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.724062 -1.386418 -2.341342"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-395",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.573986 -0.960241 0.680967"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-396",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 3.291174 0.02826 3.389419"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-397",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.66888 -2.146285 -4.634772"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-398",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -0.402781 2.6464 4.339248"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-399",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position -3.526343 1.735952 -0.129321"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-400",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.594766 -3.142767 0.862557"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-401",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.129202 4.032329 3.844991"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-402",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 1.071627 -1.325833 0.052524"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-403",
+									"linecount" : 10,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 128.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 2.203403 -3.11 1.311941"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-404",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "jit_matrix", "" ],
+									"patching_rect" : [ 50.0, 150.0, 100.0, 140.0 ],
+									"text" : "jit.gl.gridshape @shape sphere @lighting_enable 1 @smooth_shading 1 @scale 0.15 0.15 0.15 @position 0.827646 -0.949595 -4.163664"
 								}
 
 							}
@@ -2324,7 +3662,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 350.0, 291.0, 60.0, 20.0 ],
+					"patching_rect" : [ 485.0, 421.199951000000056, 60.0, 20.0 ],
 					"text" : "r pos_xyz"
 				}
 
@@ -2339,7 +3677,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 350.0, 370.0, 325.0, 20.0 ]
+					"patching_rect" : [ 485.0, 538.199951000000056, 325.0, 20.0 ]
 				}
 
 			}
@@ -2363,8 +3701,20 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 45.5, 414.0, 24.0, 24.0 ]
+					"parameter_enable" : 1,
+					"patching_rect" : [ 45.5, 287.0, 24.0, 24.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "button",
+							"parameter_enum" : [ "off", "on" ],
+							"parameter_type" : 2,
+							"parameter_longname" : "button"
+						}
+
+					}
+,
+					"varname" : "button"
 				}
 
 			}
@@ -2377,7 +3727,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "OSCTimeTag" ],
-					"patching_rect" : [ 45.5, 386.800048999999944, 111.0, 20.0 ],
+					"patching_rect" : [ 45.5, 259.800048999999944, 111.0, 20.0 ],
 					"text" : "OpenSoundControl"
 				}
 
@@ -2392,7 +3742,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 45.5, 352.799987999999985, 121.0, 32.0 ],
+					"patching_rect" : [ 45.5, 225.799987999999985, 121.0, 32.0 ],
 					"text" : "udpreceive 1337 cnmat"
 				}
 
@@ -2420,7 +3770,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 45.5, 321.800018000000023, 127.0, 30.0 ],
+					"patching_rect" : [ 45.5, 194.800018000000023, 127.0, 30.0 ],
 					"text" : "Parsing OSC packets to produce Max data:"
 				}
 
@@ -2435,7 +3785,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 350.0, 331.800018000000023, 325.0, 20.0 ]
+					"patching_rect" : [ 485.0, 499.999969000000078, 325.0, 20.0 ]
 				}
 
 			}
@@ -2449,7 +3799,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 588.0, 438.0, 154.0, 20.0 ]
+					"patching_rect" : [ 485.0, 617.0, 154.0, 20.0 ]
 				}
 
 			}
@@ -2463,7 +3813,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 588.0, 418.0, 154.0, 20.0 ]
+					"patching_rect" : [ 485.0, 597.0, 154.0, 20.0 ]
 				}
 
 			}
@@ -2477,7 +3827,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 350.0, 406.800048999999944, 154.0, 20.0 ]
+					"patching_rect" : [ 485.0, 575.0, 154.0, 20.0 ]
 				}
 
 			}
@@ -2491,7 +3841,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 350.0, 352.0, 325.0, 20.0 ]
+					"patching_rect" : [ 485.0, 520.199951000000056, 325.0, 20.0 ]
 				}
 
 			}
@@ -2500,8 +3850,10 @@
 					"fontname" : "Helvetica",
 					"fontsize" : 12.0,
 					"frozen_object_attributes" : 					{
+						"gl_color" : [ 0.754723370075226, 0.533221483230591, 0.405449509620667, 1.0 ],
 						"lighting_enable" : 1,
 						"scale" : [ 0.300000011920929, 0.300000011920929, 0.300000011920929 ],
+						"shape" : "capsule",
 						"smooth_shading" : 1
 					}
 ,
@@ -2510,7 +3862,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 350.0, 504.0, 170.0, 20.0 ],
+					"patching_rect" : [ 485.0, 639.0, 170.0, 20.0 ],
 					"text" : "jit.gl.gridshape @shape cube"
 				}
 
@@ -2522,8 +3874,20 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 33.0, 6.0, 36.5, 36.5 ]
+					"parameter_enable" : 1,
+					"patching_rect" : [ 33.0, 6.0, 36.5, 36.5 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "toggle",
+							"parameter_enum" : [ "off", "on" ],
+							"parameter_type" : 2,
+							"parameter_longname" : "toggle"
+						}
+
+					}
+,
+					"varname" : "toggle"
 				}
 
 			}
@@ -2539,6 +3903,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-87", 0 ],
+					"source" : [ "obj-110", 0 ]
 				}
 
 			}
@@ -2621,7 +3992,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"midpoints" : [ 597.5, 489.0, 359.5, 489.0 ],
+					"midpoints" : [ 494.5, 609.0, 494.5, 609.0 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
@@ -2629,7 +4000,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"midpoints" : [ 597.5, 489.0, 359.5, 489.0 ],
+					"midpoints" : [ 494.5, 630.0, 494.5, 630.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -2703,6 +4074,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-62", 0 ],
+					"source" : [ "obj-61", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-98", 0 ],
+					"source" : [ "obj-63", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
 					"source" : [ "obj-8", 0 ]
 				}
@@ -2716,6 +4101,16 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-98" : [ "multislider[6]", "multislider[1]", 0 ],
+			"obj-11" : [ "button", "button", 0 ],
+			"obj-3" : [ "toggle", "toggle", 0 ],
+			"parameterbanks" : 			{
+
+			}
+
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "generate_samples_spheres.js",
 				"bootpath" : "~/fag/mct4043-motion/project",
@@ -2729,6 +4124,10 @@
 			}
 , 			{
 				"name" : "OpenSoundControl.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "mira.motion.mxo",
 				"type" : "iLaX"
 			}
  ],

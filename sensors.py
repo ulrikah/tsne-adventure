@@ -47,15 +47,18 @@ class SensorsHandler(object):
     def __init__(self, outgoing_address="127.0.0.1", outgoing_port=1337, n_acc_samples = 10):
         self.start = time.time()
         self.n_acc_samples = n_acc_samples # number of accelerometer samples to store
-        self.jerk_threshold = 50
+        self.jerk_threshold = 1500
         self.samples = [] # audio samples
-        self.acc_samples = np.zeros((1, 4)) # accelerometer samples: [timestamp, x, y, z]
-        self.client = SimpleUDPClient(outgoing_address, outgoing_port)
+        self.acc_samples = np.zeros((1, 4)) # accelerometer samples in the form [timestamp, x, y, z]
+        self.client = SimpleUDPClient(outgoing_address, outgoing_port) # to send OSC to Max
 
         # controlled by rotation vector
         self.position = np.array([0., 0., 0.])
-        self.step_size = 0.02 # step size for each frame
+        self.step_size = 0.005 # step size in the 3D space for each frame
         self.closest = None # closest neighbor to the device
+        self.last_sample_playback = time.time()
+        self.cooldown = 0.2 # seconds
+
 
         # debug
         self.i = 1
@@ -77,14 +80,13 @@ class SensorsHandler(object):
         z -= 9.80665
         self.append_latest_measurement(x, y, z)
         self.determine_jerk(x, y, z)
-        # self.update_position(x, y, z)
 
     def sensors2osc_handler(self, addr, *message):
         x, y, z = message
         z -= 9.80665
         self.append_latest_measurement(x, y, z)
+        self.client.send_message("/accelerometer", [x, y, z])
         self.determine_jerk(x, y, z)
-        # self.update_position(x, y, z)
 
     def append_latest_measurement(self, x, y, z):
         sample = np.array([[x, y, z, time.time()]])
@@ -109,16 +111,18 @@ class SensorsHandler(object):
         if self.samples:
             closest = self.closest_neighbor_sample(self.position, self.samples)
             if closest != self.closest:
+                '''
                 print(f"New closest neighbor: {closest['path']}")
                 x, y, z = closest['point']
                 print(f"x : {round(x, 2)} | y : {round(y, 2)} | z : {round(z, 2)}")
+                '''
                 self.closest = closest
-                self.trigger_sample(self.closest['path'])
         
     def trigger_sample(self, path):
         self.client.send_message("/play_sample", path)
         # play_sample(self.closest['path'])
 
+    # closest by euclidian distance
     def closest_neighbor_sample(self, position, samples):
         distances = np.empty((len(samples), 2))
         closest = math.inf
@@ -134,60 +138,27 @@ class SensorsHandler(object):
     def _normalize_rotation(self, angle):
         return (angle + 1.) * .5
 
-    def update_position(self, x, y, z, required_samples = 3):
-        '''
-            TO DO: requires polish to avoid too much drifting. See:
-                - https://github.com/xioTechnologies/Gait-Tracking-With-x-IMU/
-                - https://stackoverflow.com/questions/47210512/using-pykalman-on-raw-acceleration-data-to-calculate-position
-                - https://github.com/datascopeanalytics/traces
-                - https://dsp.stackexchange.com/questions/34463/removing-drift-from-integration-of-accelerometer-data
-        '''
-        if len(self.acc_samples) <= required_samples:
-            return
-
-        last_n_acc_samples = self.acc_samples[-required_samples:].copy()
-
-        # filter the data
-        # filtered_x = butter_bandpass_filter(self.acc_samples[:,0], f_low, f_high, self.fs, order=4)
-        # filtered_y = butter_bandpass_filter(self.acc_samples[:,1], f_low, f_high, self.fs, order=4)
-        # filtered_z = butter_bandpass_filter(self.acc_samples[:,2], f_low, f_high, self.fs, order=4)
-
-        # convert accelerometer data from g to SI units
-        x_si = last_n_acc_samples[:,0] * 9.80665
-        y_si = last_n_acc_samples[:,1] * 9.80665
-        z_si = last_n_acc_samples[:,2] * 9.80665
-        time = last_n_acc_samples[:,3]
-
-        # integrating filtered acceleration to get velocity in each direction
-        velocity_x = integrate.cumtrapz(x_si, time, initial=0)
-        velocity_y = integrate.cumtrapz(y_si, time, initial=0)
-        velocity_z = integrate.cumtrapz(z_si, time, initial=0)
-
-        #Integrating filtered velocity to get position in each direction
-        pos_x = integrate.cumtrapz(velocity_x, time, initial=0)
-        pos_y = integrate.cumtrapz(velocity_y, time, initial=0)
-        pos_z = integrate.cumtrapz(velocity_z, time, initial=0)
-
-        self.client.send_message("/position", [pos_x[-1], pos_y[-1], pos_z[-1]])
-        self.debug(f"{pos_x[-1]} | {pos_y[-1]} | {pos_z[-1]}")
+    def determine_jerk(self, x, y, z, required_samples = 2):
+        # return if we don't yet have enough samples
+        if len(self.acc_samples) <= required_samples: return
+        
+        avg_t = np.mean(np.abs(np.diff(self.acc_samples[:,3]))) # average time diff
+        jerk_xyz = [np.sum(np.abs(np.diff(self.acc_samples[:,i]))) / (avg_t * required_samples) for i in range(3)]
+        
+        for i, jerk in enumerate(jerk_xyz):
+            if jerk > self.jerk_threshold and self.closest \
+                and time.time() - self.last_sample_playback > self.cooldown:
+                # print(f"Jerk value {jerk} in {self.idx2xyz(i)} direction")
+                print(f"Time diff {time.time() - self.last_sample_playback}")
+                self.last_sample_playback = time.time()
+                velocity = int(map_range(jerk, 0, self.jerk_threshold, 60, 127, strict=True))
+                self.trigger_sample(self.closest['path'])
 
     def debug(self, message, i = 50):
         if self.i % i == 0:
             print(message)
             self.i = 1
         self.i += 1
-
-    def determine_jerk(self, x, y, z, required_samples = 2):
-        if len(self.acc_samples) <= required_samples: # return if we don't yet have enough samples
-            return
-        avg_t = np.mean(np.abs(np.diff(self.acc_samples[:,3]))) # average time diff
-        jerks = [np.sum(np.abs(np.diff(self.acc_samples[:,i]))) / (avg_t * required_samples) for i in range(3)]
-        
-        for i, jerk in enumerate(jerks):
-            if jerk > self.jerk_threshold:
-                # print(f"Jerk value {jerk} in {self.idx2xyz(i)} direction")
-                vel = int(map_range(jerk, 0, 300, 60, 127, strict=True))
-                self.send_message(note=60, channel=i, velocity=vel)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='tSNE on audio')
@@ -213,12 +184,12 @@ if __name__ == "__main__":
         for sample in samples:
             client.send_message("/tsne", sample['point'])
     
-        # preprocess the samples a bit
+        # preprocess the samples
         if samples:
-            # normalize to [-5, 5]
             for sample in samples:
-                # numpy array is faster for euclidian distance later on
+                # map the coordinate value range to [-5, 5]
                 sample['point'] = np.array(list(map(lambda x: (x - 0.5) * 10, sample['point'])))
+                # absolute path is required for the Max buffer~ object
                 sample['path'] = os.path.abspath(sample['path'])
             sensors.samples = samples
         else:
@@ -226,8 +197,8 @@ if __name__ == "__main__":
 
     dispatcher = dispatcher.Dispatcher()
     dispatcher.map('/accelerometer', sensors.sensors2osc_handler) # sensors2osc
-    dispatcher.map('/oscHook', sensors.osc_hook_handler) # oscHook (bundled message with all info)
     dispatcher.map('/rotationvector', sensors.rotation_handler) # sensors2osc (4 values)
+    dispatcher.map('/oscHook', sensors.osc_hook_handler) # oscHook (bundled message with all info)
     dispatcher.set_default_handler(sensors.default_handler)
     server = osc_server.BlockingOSCUDPServer((address, port), dispatcher)
     print('OSC server started on {}:{}'.format(address, port))
