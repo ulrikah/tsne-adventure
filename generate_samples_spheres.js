@@ -15,12 +15,13 @@ function sample()
 	var y = normalize(arguments[1]);
 	var z = normalize(arguments[2]);
 	
+	var scale = .15
 	var sample = this.patcher.newdefault(50, 150,
 			"jit.gl.gridshape",
 			"@shape", "sphere",
 			"@lighting_enable", 1,
 			"@smooth_shading", 1,
-			"@scale", .3, .3, .3,
+			"@scale", scale, scale, scale,
 			"@position", x, y, z
 		);
 	
