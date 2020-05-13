@@ -1,3 +1,5 @@
+# Forked from https://github.com/ml4a/ml4a-guides/blob/master/notebooks/audio-tsne.ipynb
+
 import argparse
 import sys
 import fnmatch
@@ -10,8 +12,8 @@ from pythonosc.udp_client import SimpleUDPClient
 
 def parse_args():
     parser = argparse.ArgumentParser(description='tSNE on audio')
-    parser.add_argument('--input-dir', action='store', help='path to directory of input files')
-    parser.add_argument('--output-file', action='store', default='coordinates.json', help='path to where to store t-SNE analysis in json (default coordinates.json)')
+    parser.add_argument('--input_dir', action='store', help='path to directory of input files')
+    parser.add_argument('--output_file', action='store', default='coordinates.json', help='path to where to store t-SNE analysis in json (default coordinates.json)')
     parser.add_argument('--dimensions', action='store', default=3, help='dimensionality of t-SNE points (default 2)')
     parser.add_argument('--perplexity', action='store', default=150, help='perplexity of t-SNE (default 30)')
     return parser.parse_args()

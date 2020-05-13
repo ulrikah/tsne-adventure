@@ -4,6 +4,7 @@
 
 import time
 import numpy as np
+import os
 import sys
 import argparse
 import json
@@ -15,7 +16,6 @@ from scipy.signal import butter, lfilter
 from pythonosc import dispatcher, osc_server
 from pythonosc.udp_client import SimpleUDPClient
 from socket import AF_INET, SOCK_DGRAM, socket
-import mido
 
 def get_ip_address():
     s = socket(AF_INET, SOCK_DGRAM)
@@ -44,12 +44,12 @@ def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
 
 
 class SensorsHandler(object):
-    def __init__(self, outgoing_address="127.0.0.1", outgoing_port=1337, n_samples = 10):
+    def __init__(self, outgoing_address="127.0.0.1", outgoing_port=1337, n_acc_samples = 10):
         self.start = time.time()
-        self.n_samples = n_samples # number of samples to store
+        self.n_acc_samples = n_acc_samples # number of accelerometer samples to store
         self.jerk_threshold = 50
-        self.samples = np.zeros((1, 4)) # timestamp, x, y, z
-        self.midi_port = self._get_midi_port()
+        self.samples = [] # audio samples
+        self.acc_samples = np.zeros((1, 4)) # accelerometer samples: [timestamp, x, y, z]
         self.client = SimpleUDPClient(outgoing_address, outgoing_port)
 
         # controlled by rotation vector
@@ -59,20 +59,6 @@ class SensorsHandler(object):
 
         # debug
         self.i = 1
-
-    def _get_midi_port(self, port_name="to Max 1"):
-        try:
-            return mido.open_output(port_name)
-        except IOError:
-            split = "\n\t"
-            print(f"The MIDI port '{port_name}' is not available. Try one of the following: \n\t{split.join(mido.get_input_names())}")
-            sys.exit()
-        return mido.open_output()
-
-    def send_message(self, note=60, velocity=100, msg_type="note_on", channel=0):
-        msg = mido.Message(msg_type, note=note, velocity=velocity)
-        self.midi_port.send(msg)
-        return
 
     def idx2xyz(self, idx):
         dims = ['x', 'y', 'z']
@@ -102,9 +88,9 @@ class SensorsHandler(object):
 
     def append_latest_measurement(self, x, y, z):
         sample = np.array([[x, y, z, time.time()]])
-        self.samples = np.vstack((self.samples, sample))
-        if len(self.samples) > self.n_samples:
-            self.samples = np.delete(self.samples, 0, 0)
+        self.acc_samples = np.vstack((self.acc_samples, sample))
+        if len(self.acc_samples) > self.n_acc_samples:
+            self.acc_samples = np.delete(self.acc_samples, 0, 0)
         return
 
     def rotation_handler(self, addr, *message):
@@ -118,26 +104,32 @@ class SensorsHandler(object):
         self.position += (self.step_size * np.array([pitch, roll, yaw]))
         self.position = np.clip(self.position, -5, 5)
         self.client.send_message("/position", list(self.position))
-        closest = self.closest_neighbor()
-        if closest != self.closest:
-            print(f"New closest neighbor \n {closest['point']}")
-            self.closest = closest
-            play_sample(self.closest['path'])
+        
+        # i.e. when a list of t-sne coordinates has been provided
+        if self.samples:
+            closest = self.closest_neighbor_sample(self.position, self.samples)
+            if closest != self.closest:
+                print(f"New closest neighbor: {closest['path']}")
+                x, y, z = closest['point']
+                print(f"x : {round(x, 2)} | y : {round(y, 2)} | z : {round(z, 2)}")
+                self.closest = closest
+                self.trigger_sample(self.closest['path'])
+        
+    def trigger_sample(self, path):
+        self.client.send_message("/play_sample", path)
+        # play_sample(self.closest['path'])
 
-    def closest_neighbor(self):
-        distances = np.empty((len(self.samples), 2))
+    def closest_neighbor_sample(self, position, samples):
+        distances = np.empty((len(samples), 2))
         closest = math.inf
         closest_idx = None
-        for i, sample in enumerate(self.samples):
-            d = np.linalg.norm(self.position - sample['point'])
+        for i, sample in enumerate(samples):
+            d = np.linalg.norm(position - sample['point'])
             if (d < closest):
                 closest = d
                 closest_idx = i
         assert closest_idx is not None, "No samples in the space"
-        return self.samples[closest_idx]
-
-        
-        
+        return samples[closest_idx]
 
     def _normalize_rotation(self, angle):
         return (angle + 1.) * .5
@@ -150,21 +142,21 @@ class SensorsHandler(object):
                 - https://github.com/datascopeanalytics/traces
                 - https://dsp.stackexchange.com/questions/34463/removing-drift-from-integration-of-accelerometer-data
         '''
-        if len(self.samples) <= required_samples:
+        if len(self.acc_samples) <= required_samples:
             return
 
-        last_n_samples = self.samples[-required_samples:].copy()
+        last_n_acc_samples = self.acc_samples[-required_samples:].copy()
 
         # filter the data
-        # filtered_x = butter_bandpass_filter(self.samples[:,0], f_low, f_high, self.fs, order=4)
-        # filtered_y = butter_bandpass_filter(self.samples[:,1], f_low, f_high, self.fs, order=4)
-        # filtered_z = butter_bandpass_filter(self.samples[:,2], f_low, f_high, self.fs, order=4)
+        # filtered_x = butter_bandpass_filter(self.acc_samples[:,0], f_low, f_high, self.fs, order=4)
+        # filtered_y = butter_bandpass_filter(self.acc_samples[:,1], f_low, f_high, self.fs, order=4)
+        # filtered_z = butter_bandpass_filter(self.acc_samples[:,2], f_low, f_high, self.fs, order=4)
 
         # convert accelerometer data from g to SI units
-        x_si = last_n_samples[:,0] * 9.80665
-        y_si = last_n_samples[:,1] * 9.80665
-        z_si = last_n_samples[:,2] * 9.80665
-        time = last_n_samples[:,3]
+        x_si = last_n_acc_samples[:,0] * 9.80665
+        y_si = last_n_acc_samples[:,1] * 9.80665
+        z_si = last_n_acc_samples[:,2] * 9.80665
+        time = last_n_acc_samples[:,3]
 
         # integrating filtered acceleration to get velocity in each direction
         velocity_x = integrate.cumtrapz(x_si, time, initial=0)
@@ -186,10 +178,10 @@ class SensorsHandler(object):
         self.i += 1
 
     def determine_jerk(self, x, y, z, required_samples = 2):
-        if len(self.samples) <= required_samples: # return if we don't yet have enough samples
+        if len(self.acc_samples) <= required_samples: # return if we don't yet have enough samples
             return
-        avg_t = np.mean(np.abs(np.diff(self.samples[:,3]))) # average time diff
-        jerks = [np.sum(np.abs(np.diff(self.samples[:,i]))) / (avg_t * required_samples) for i in range(3)]
+        avg_t = np.mean(np.abs(np.diff(self.acc_samples[:,3]))) # average time diff
+        jerks = [np.sum(np.abs(np.diff(self.acc_samples[:,i]))) / (avg_t * required_samples) for i in range(3)]
         
         for i, jerk in enumerate(jerks):
             if jerk > self.jerk_threshold:
@@ -202,14 +194,6 @@ if __name__ == "__main__":
     parser.add_argument('--tsne_file', action='store', help='path to existing file with t-SNE 3D coordinates')
     args = parser.parse_args()
 
-    if args.tsne_file:
-        with open(args.tsne_file) as tsne_file:
-            samples = json.load(tsne_file)
-        client = SimpleUDPClient("127.0.0.1", 1337)
-        client.send_message("/tsne-clear", "")
-        for sample in samples:
-            client.send_message("/tsne", sample['point'])
-    
     # server
     address = get_ip_address()
     port = 9000
@@ -219,21 +203,32 @@ if __name__ == "__main__":
     outgoing_port = 1337
     
     sensors = SensorsHandler(outgoing_address=outgoing_address, outgoing_port=outgoing_port)
-    if samples:
-        # normalize to [-5, 5]
+
+    if args.tsne_file:
+        samples = []
+        with open(args.tsne_file) as tsne_file:
+            samples = json.load(tsne_file)
+        client = SimpleUDPClient("127.0.0.1", 1337)
+        client.send_message("/tsne-clear", "")
         for sample in samples:
-            # numpy array is faster for euc dist later on
-            sample['point'] = np.array(list(map(lambda x: (x - 0.5) * 10, sample['point'])))
-        sensors.samples = samples
-    else:
-        print(f"NB: to visualise the t-SNE output, you have to use specify a t-SNE file. See --help")
+            client.send_message("/tsne", sample['point'])
+    
+        # preprocess the samples a bit
+        if samples:
+            # normalize to [-5, 5]
+            for sample in samples:
+                # numpy array is faster for euclidian distance later on
+                sample['point'] = np.array(list(map(lambda x: (x - 0.5) * 10, sample['point'])))
+                sample['path'] = os.path.abspath(sample['path'])
+            sensors.samples = samples
+        else:
+            print(f"NB: to visualise the t-SNE output, you have to use specify a t-SNE file. See --help")
 
     dispatcher = dispatcher.Dispatcher()
     dispatcher.map('/accelerometer', sensors.sensors2osc_handler) # sensors2osc
     dispatcher.map('/oscHook', sensors.osc_hook_handler) # oscHook (bundled message with all info)
     dispatcher.map('/rotationvector', sensors.rotation_handler) # sensors2osc (4 values)
     dispatcher.set_default_handler(sensors.default_handler)
-    
     server = osc_server.BlockingOSCUDPServer((address, port), dispatcher)
     print('OSC server started on {}:{}'.format(address, port))
     server.serve_forever()
