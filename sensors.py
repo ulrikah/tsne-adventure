@@ -54,7 +54,7 @@ class SensorsHandler(object):
 
         # controlled by rotation vector
         self.position = np.array([0., 0., 0.])
-        self.step_size = 0.005 # step size in the 3D space for each frame
+        self.step_size = 0.01 # step size in the 3D space for each frame
         self.closest = None # closest neighbor to the device
         self.last_sample_playback = time.time()
         self.cooldown = 0.2 # seconds
@@ -84,8 +84,8 @@ class SensorsHandler(object):
     def sensors2osc_handler(self, addr, *message):
         x, y, z = message
         z -= 9.80665
-        self.append_latest_measurement(x, y, z)
         self.client.send_message("/accelerometer", [x, y, z])
+        self.append_latest_measurement(x, y, z)
         self.determine_jerk(x, y, z)
 
     def append_latest_measurement(self, x, y, z):
@@ -102,10 +102,13 @@ class SensorsHandler(object):
         roll = self._normalize_rotation(roll)
         yaw = self._normalize_rotation(yaw)
         '''
-        
+        # rotation controls position updates
         self.position += (self.step_size * np.array([pitch, roll, yaw]))
         self.position = np.clip(self.position, -5, 5)
         self.client.send_message("/position", list(self.position))
+        
+        # sending a scaled rotation value to be used for visualisation
+        self.client.send_message("/rotation", list(map(lambda deg: deg * 90, [pitch, yaw, roll])))
         
         # i.e. when a list of t-sne coordinates has been provided
         if self.samples:
@@ -148,8 +151,8 @@ class SensorsHandler(object):
         for i, jerk in enumerate(jerk_xyz):
             if jerk > self.jerk_threshold and self.closest \
                 and time.time() - self.last_sample_playback > self.cooldown:
-                # print(f"Jerk value {jerk} in {self.idx2xyz(i)} direction")
-                print(f"Time diff {time.time() - self.last_sample_playback}")
+                # print(f"Hit with jerk value {jerk} in {self.idx2xyz(i)} direction")
+                # print(f"Time since last hit {time.time() - self.last_sample_playback}")
                 self.last_sample_playback = time.time()
                 velocity = int(map_range(jerk, 0, self.jerk_threshold, 60, 127, strict=True))
                 self.trigger_sample(self.closest['path'])
