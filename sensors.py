@@ -151,7 +151,7 @@ class SensorsHandler(object):
         for i, jerk in enumerate(jerk_xyz):
             if jerk > self.jerk_threshold and self.closest \
                 and time.time() - self.last_sample_playback > self.cooldown:
-                # print(f"Hit with jerk value {jerk} in {self.idx2xyz(i)} direction")
+                print(f"Hit with jerk value {jerk} in {self.idx2xyz(i)} direction")
                 # print(f"Time since last hit {time.time() - self.last_sample_playback}")
                 self.last_sample_playback = time.time()
                 velocity = int(map_range(jerk, 0, self.jerk_threshold, 60, 127, strict=True))
